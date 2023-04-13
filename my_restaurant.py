@@ -11,7 +11,7 @@ class restaurant:
         
     @classmethod
     def menu(cls):
-        print('MENU OF HOTEL 5-STAR')
+        print('***************************** MENU *****************************')
         print()
         print('Dish Name','Price','Type',sep='\t  ')
         for i in cls.menu_:
