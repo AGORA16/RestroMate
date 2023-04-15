@@ -8,19 +8,23 @@ class restaurant:
         self.type=type
         self.ol={}
         restaurant.menu_.append(self)
-        
+
     @classmethod
     def menu(cls):
         print('***************************** MENU *****************************')
         print()
-        print('Dish Name','Price','Type',sep='\t  ')
+        print('Dish Name',end='\t')
+        print('Price',end='\t')
+        print('Type')
         for i in cls.menu_:
-            print(i.d_name,i.price,i.type,sep='\t\t')
+            print(i.d_name,end='\t\t')
+            print(i.price,end='\t')
+            print(i.type)
         print()
 
     def show_order(self):
         if self.ol!={}:
-            print('Dish Name','Price','Type','ordered count',sep='  ')
+            print('Dish Name','Price','Type','ordered count',sep='   ')
             for i in self.ol:
                 for j in restaurant.menu_:
                     if i==j.d_name:
@@ -112,5 +116,6 @@ print('****************** WELCOME TO THE GRAND FAMOUS RESTAURANT ***************
 print('******************************* Chromepet *******************************')
 r1=restaurant('dosa',25,'veg')
 r2=restaurant('idli',15,'veg')
-r3=restaurant('chicken65',120,'non-veg')
+r3=restaurant('fish',120,'non-veg')
+r4=restaurant('prawn',100,'non-veg')
 r1.main()
